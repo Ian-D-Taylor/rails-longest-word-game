@@ -1,0 +1,14 @@
+<h1>RESULTS</h1>
+
+<% if @included %>
+  <% if @english %>
+  <p>Well PLayed! <%= @word %> is english</p>
+</br>
+  <p>Your Score is <%= @score += @word.length %></p>
+  <% else %>
+    <p><strong>Oi! </strong><%= @word %> isn't a fucking English word</p>
+  <% end %>
+<% else %>
+    <p><strong>Oi </strong><%= @word %> can't be fucking made  out of <%= @letters.join(", ") %></p>
+<% end %>
+
